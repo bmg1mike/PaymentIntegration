@@ -1,0 +1,13 @@
+version: '3.4'
+
+services:
+  paymentintegration.api:
+    image: ${DOCKER_REGISTRY-}paymentintegration
+    build:
+      context: .
+      dockerfile: PaymentIntegration.API/Dockerfile
+
+  paymentdb:
+    image: mongo
+
+  
